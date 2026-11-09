@@ -1,0 +1,6 @@
+.venv/
+output/
+fonts/
+voiceovers/
+.env
+.DS_Store

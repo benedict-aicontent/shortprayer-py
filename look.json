@@ -1,0 +1,139 @@
+{
+  "_about": "On-screen text designs. Every video gets one random set for the hook and one random set for the prayer (sets are not repeated within a batch until all have been used). Add, remove or edit sets freely. Lines that start with an underscore are notes and are ignored.",
+  "_fields": {
+    "name": "any label, shown in the log",
+    "font": "a font file name from C:\\Windows\\Fonts (for example georgiab.ttf) or a .ttf in the fonts folder",
+    "font_size": "largest size, in pixels on a 1080px-wide video. Long text shrinks automatically to fit, never below min_font_size",
+    "min_font_size": "smallest size the text may shrink to",
+    "color": "text color, #RRGGBB",
+    "line_spacing": "line height as a multiple of the font size",
+    "align": "center, left or right",
+    "margins": "px kept clear from the edges of the screen (left, right, top, bottom)",
+    "zone": "where the text sits, as % of the screen height (top and bottom), and vertical_align (top, center or bottom) inside that area",
+    "background": "enabled, color, opacity (0-1), radius (rounded corners), padding_x, padding_y: the box behind the text block",
+    "outline": "width (px, 0 = none) and color around each letter",
+    "shadow": "enabled, color, opacity, offset_x, offset_y, blur"
+  },
+
+  "hook": {
+    "text_case": "upper",
+    "styles": [
+      {"name": "Impact white",
+       "font": "impact.ttf", "font_size": 80, "min_font_size": 46, "color": "#FFFFFF", "line_spacing": 1.12, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 8, "bottom": 31, "vertical_align": "center"},
+       "background": {"enabled": false, "color": "#000000", "opacity": 0.5, "radius": 24, "padding_x": 40, "padding_y": 28},
+       "outline": {"width": 5, "color": "#000000"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.6, "offset_x": 3, "offset_y": 5, "blur": 7}},
+
+      {"name": "Arial Black gold",
+       "font": "ariblk.ttf", "font_size": 68, "min_font_size": 42, "color": "#FFD966", "line_spacing": 1.15, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 8, "bottom": 31, "vertical_align": "center"},
+       "background": {"enabled": false, "color": "#000000", "opacity": 0.5, "radius": 24, "padding_x": 40, "padding_y": 28},
+       "outline": {"width": 4, "color": "#1A1A1A"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.55, "offset_x": 3, "offset_y": 4, "blur": 6}},
+
+      {"name": "Georgia bold on dark box",
+       "font": "georgiab.ttf", "font_size": 66, "min_font_size": 40, "color": "#FFFFFF", "line_spacing": 1.2, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 9, "bottom": 32, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#000000", "opacity": 0.55, "radius": 26, "padding_x": 44, "padding_y": 30},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": false, "color": "#000000", "opacity": 0.5, "offset_x": 2, "offset_y": 3, "blur": 4}},
+
+      {"name": "Segoe Black on deep red",
+       "font": "seguibl.ttf", "font_size": 64, "min_font_size": 40, "color": "#FFFFFF", "line_spacing": 1.15, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 9, "bottom": 32, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#7A1F2B", "opacity": 0.88, "radius": 20, "padding_x": 44, "padding_y": 28},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.4, "offset_x": 2, "offset_y": 3, "blur": 5}},
+
+      {"name": "Trebuchet dark on cream",
+       "font": "trebucbd.ttf", "font_size": 66, "min_font_size": 40, "color": "#1E1A16", "line_spacing": 1.15, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 9, "bottom": 32, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#FFF3D6", "opacity": 0.93, "radius": 32, "padding_x": 46, "padding_y": 30},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.35, "offset_x": 2, "offset_y": 4, "blur": 8}},
+
+      {"name": "Franklin Gothic yellow",
+       "font": "framd.ttf", "font_size": 74, "min_font_size": 44, "color": "#FFE066", "line_spacing": 1.12, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 8, "bottom": 31, "vertical_align": "center"},
+       "background": {"enabled": false, "color": "#000000", "opacity": 0.5, "radius": 24, "padding_x": 40, "padding_y": 28},
+       "outline": {"width": 5, "color": "#1A1A1A"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.6, "offset_x": 3, "offset_y": 5, "blur": 7}},
+
+      {"name": "Verdana bold on navy",
+       "font": "verdanab.ttf", "font_size": 58, "min_font_size": 38, "color": "#FFFFFF", "line_spacing": 1.2, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 9, "bottom": 32, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#14324D", "opacity": 0.85, "radius": 22, "padding_x": 42, "padding_y": 28},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": false, "color": "#000000", "opacity": 0.5, "offset_x": 2, "offset_y": 3, "blur": 4}}
+    ]
+  },
+
+  "prayer": {
+    "text_case": "normal",
+    "styles": [
+      {"name": "Georgia on dark box",
+       "font": "georgia.ttf", "font_size": 54, "min_font_size": 34, "color": "#FFFFFF", "line_spacing": 1.3, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 35, "bottom": 82, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#000000", "opacity": 0.52, "radius": 32, "padding_x": 44, "padding_y": 36},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": false, "color": "#000000", "opacity": 0.5, "offset_x": 2, "offset_y": 3, "blur": 4}},
+
+      {"name": "Segoe UI outline",
+       "font": "segoeui.ttf", "font_size": 52, "min_font_size": 34, "color": "#FFFFFF", "line_spacing": 1.3, "align": "center",
+       "margins": {"left": 80, "right": 80, "top": 120, "bottom": 360},
+       "zone": {"top": 35, "bottom": 82, "vertical_align": "center"},
+       "background": {"enabled": false, "color": "#000000", "opacity": 0.5, "radius": 28, "padding_x": 40, "padding_y": 30},
+       "outline": {"width": 4, "color": "#000000"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.6, "offset_x": 2, "offset_y": 4, "blur": 6}},
+
+      {"name": "Palatino cream on brown",
+       "font": "pala.ttf", "font_size": 54, "min_font_size": 34, "color": "#FFF8E7", "line_spacing": 1.3, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 35, "bottom": 82, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#2B1B12", "opacity": 0.62, "radius": 30, "padding_x": 46, "padding_y": 36},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": false, "color": "#000000", "opacity": 0.5, "offset_x": 2, "offset_y": 3, "blur": 4}},
+
+      {"name": "Calibri on navy",
+       "font": "calibri.ttf", "font_size": 58, "min_font_size": 36, "color": "#FFFFFF", "line_spacing": 1.28, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 35, "bottom": 82, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#0F2A43", "opacity": 0.72, "radius": 28, "padding_x": 44, "padding_y": 34},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": false, "color": "#000000", "opacity": 0.5, "offset_x": 2, "offset_y": 3, "blur": 4}},
+
+      {"name": "Times outline",
+       "font": "times.ttf", "font_size": 60, "min_font_size": 36, "color": "#FFFFFF", "line_spacing": 1.25, "align": "center",
+       "margins": {"left": 80, "right": 80, "top": 120, "bottom": 360},
+       "zone": {"top": 35, "bottom": 82, "vertical_align": "center"},
+       "background": {"enabled": false, "color": "#000000", "opacity": 0.5, "radius": 28, "padding_x": 40, "padding_y": 30},
+       "outline": {"width": 4, "color": "#000000"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.55, "offset_x": 2, "offset_y": 4, "blur": 6}},
+
+      {"name": "Constantia dark on white",
+       "font": "constan.ttf", "font_size": 54, "min_font_size": 34, "color": "#1F1F1F", "line_spacing": 1.3, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 35, "bottom": 82, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#FFFFFF", "opacity": 0.88, "radius": 32, "padding_x": 46, "padding_y": 36},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": true, "color": "#000000", "opacity": 0.3, "offset_x": 2, "offset_y": 4, "blur": 8}},
+
+      {"name": "Tahoma cream on dark",
+       "font": "tahoma.ttf", "font_size": 52, "min_font_size": 34, "color": "#FDF3C8", "line_spacing": 1.3, "align": "center",
+       "margins": {"left": 70, "right": 70, "top": 120, "bottom": 360},
+       "zone": {"top": 35, "bottom": 82, "vertical_align": "center"},
+       "background": {"enabled": true, "color": "#000000", "opacity": 0.58, "radius": 26, "padding_x": 42, "padding_y": 34},
+       "outline": {"width": 0, "color": "#000000"},
+       "shadow": {"enabled": false, "color": "#000000", "opacity": 0.5, "offset_x": 2, "offset_y": 3, "blur": 4}}
+    ]
+  }
+}

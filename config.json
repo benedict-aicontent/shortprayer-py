@@ -1,0 +1,71 @@
+{
+  "_about": "Settings for make_videos.py. Folder names are relative to the folder this file is in. Lines that start with an underscore are notes and are ignored.",
+
+  "folders": {
+    "clips": "B:/Automation/_resources/backgrounds",
+    "music": "B:/Automation/_resources/music",
+    "voice": "B:/Automation/_resources/voices",
+    "voiceovers": "voiceovers",
+    "output": "output",
+    "fonts": "fonts",
+    "_note": "voice = where your Piper model lives. voiceovers = where the made voiceovers are saved. fonts = optional extra .ttf files (Windows fonts are found automatically)."
+  },
+
+  "batch_file": "Batch.md",
+  "look_file": "look.json",
+
+  "batch": {
+    "hook_labels": ["EMOTIONAL HOOK", "HOOK"],
+    "prayer_labels": ["PRAYER", "PRAYER TEXT"],
+    "_note": "The bold labels in Batch.md that mark the hook and the prayer text. Everything else in a day is ignored."
+  },
+
+  "piper": {
+    "command": "B:/Automation/python/sprayer/.venv/Scripts/python.exe -m piper",
+    "model": "en_US-mike-medium.onnx",
+    "speaker": null,
+    "voice_speed": 0.8,
+    "pause_between_hook_and_prayer": 1.0,
+    "sentence_pause": null,
+    "_note": "command: auto finds Piper by itself. If it cannot, put the full path of piper.exe here. model: a file name inside the voice folder, or a full path. voice_speed: 1.0 normal, 0.9 slower, 1.1 faster. pause_between_hook_and_prayer: seconds of silence. sentence_pause: seconds of silence between sentences, or null for the voice's own default. speaker: a number for multi-speaker models, otherwise null."
+  },
+
+  "timing": {
+    "voice_starts_at": 4.0,
+    "seconds_after_voice": 8.0,
+    "_note": "The voiceover starts this many seconds in, and the video continues this many seconds after the voiceover ends."
+  },
+
+  "text": {
+    "enabled": true,
+    "in_before_voice": 0.5,
+    "out_after_voice": 0.3,
+    "effect_duration": 0.6,
+    "effects": ["fade", "rise", "drop", "slide_from_left", "slide_from_right", "zoom_in", "zoom_out", "pop"],
+    "no_repeat_effects_in_batch": true,
+    "no_repeat_looks_in_batch": true,
+    "fallback_fonts": ["segoeui.ttf", "arial.ttf"],
+    "_note": "The text starts coming in in_before_voice seconds before the voice starts, and starts going out out_after_voice seconds after the voice ends. Each video gets ONE effect from the list (used for both in and out). With no_repeat_effects_in_batch the effects are not repeated until every effect has been used, so keep at least as many effects as you have days in a batch. no_repeat_looks_in_batch does the same for the look.json sets."
+  },
+
+  "video": {
+    "ratio": "auto",
+    "fps": 30,
+    "crf": 20,
+    "preset": "fast",
+    "trim_pattern": [4, 4, 4, 8],
+    "long_trim_seconds": 8,
+    "zoom_percent": 15,
+    "transition_seconds": 0.4,
+    "transitions_at": "both",
+    "clips_per_video": [3, 5],
+    "allow_clip_repeat": true,
+    "_note": "ratio: auto (9:16, or 16:9 if most clips are landscape), 9:16 or 16:9. crf: quality, lower is better. preset: faster presets render quicker (veryfast, fast, medium, slow). trim_pattern repeats; trims at least long_trim_seconds long get the slow zoom and the transitions. transitions_at: both, into or out (of the long trims). allow_clip_repeat: false means every trim in a video comes from a different clip (needs about 8-14 clips)."
+  },
+
+  "music": {
+    "volume_vs_voice": 0.5,
+    "target_loudness_lufs": -14,
+    "_note": "volume_vs_voice: 0.5 means the music is half as loud as the voiceover (it still drops further while the voice speaks)."
+  }
+}
